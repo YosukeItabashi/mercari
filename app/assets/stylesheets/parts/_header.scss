@@ -1,0 +1,183 @@
+.left-float {
+  float: left;
+}
+
+.right-float {
+  float: right;
+}
+
+header {
+  height: 90px;
+  width: 1020px;
+  margin: 0 auto;
+  padding: 8px 0 0;
+  .logo-and-search {
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    &__logo {
+    width: 134px;
+      img {
+        width: 134px;
+      }
+    }
+    &__search {
+      position: relative;
+      width: calc(100% - (134px + 16px));
+      input {
+        width: 100%;
+        height: 36px;
+        padding: 9px 32px 9px 8px;
+        background: #fafafa;
+        border-radius: 4px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+      }
+      i {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 36px;
+        line-height: 36px;
+        cursor: pointer;
+        text-align: center;
+        // content: '\e025';
+      }
+    }
+  }
+
+
+
+  .lists {
+    height: 32px;
+    margin: 8px 0 0;
+    &__left {
+      ul{
+        .categories {
+          font-size: 14px;
+          font-weight: 400;
+          position: relative;
+          display: inline-block;
+          h2 {
+            a {
+              display: block;
+              color: #333;
+              text-decoration: none;
+            }
+          }
+          ul {
+            display: none;
+            position: absolute;
+            top: 38px;
+            left: -34px;
+            z-index: 1000;
+            background: #fff;
+            .big-category {
+              // display: none;
+              width: 224px;
+              &__name {
+                font-weight: 400;
+                font-size: 14px;
+                a{
+                  padding: 0 16px;
+                  line-height: 44px;
+                  text-decoration: none;
+                }
+              }
+              ul {
+                position: absolute;
+                top: 0;
+                left: 224px;
+                bottom: 0;
+                background: #fff;
+                .middle-category {
+                  // display: none;
+                  width: 224px;
+                  a{
+                    padding: 8px 16px;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .brands {
+          position: relative;
+          display: inline-block;
+          padding: 0 0 0 16px;
+          h2 {
+            font-size: 14px;
+            font-weight: 400;
+            a {
+              display: block;
+              color: #333;
+              text-decoration: none;
+            }
+          }
+          ul {
+            display: none;
+            position: absolute;
+            top: 38px;
+            left: -34px;
+            z-index: 1000;
+            background: #fff;
+            .brand__name {
+              // display: none;
+              width: 224px;
+              h3 {
+                font-weight: 400;
+                font-size: 14px;
+                a {
+                  padding: 0 16px;
+                  line-height: 44px;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.signin-and-signup {
+  ul {
+    position: relative;
+    .signin-btn {
+      float: left;
+      margin: 0;
+      .signin-btn__text{
+        display: block;
+        background: #ea352d;
+        border: 1px solid #ea352d;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 0 16px;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+    .signup-btn {
+      float: right;
+      display: inline-block;
+      margin: 0 0 0 8px;
+      border-radius: 4px;
+      .signup-btn__text{
+        display: block;
+        border: 1px solid #0099e8;
+        background: #fff;
+        color: #0099e8;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 0 16px;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+  }
+}
