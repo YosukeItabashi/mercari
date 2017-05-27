@@ -46,8 +46,6 @@ header {
     }
   }
 
-
-
   .lists {
     height: 32px;
     margin: 8px 0 0;
@@ -65,42 +63,6 @@ header {
               text-decoration: none;
             }
           }
-          ul {
-            display: none;
-            position: absolute;
-            top: 38px;
-            left: -34px;
-            z-index: 1000;
-            background: #fff;
-            .big-category {
-              // display: none;
-              width: 224px;
-              &__name {
-                font-weight: 400;
-                font-size: 14px;
-                a{
-                  padding: 0 16px;
-                  line-height: 44px;
-                  text-decoration: none;
-                }
-              }
-              ul {
-                position: absolute;
-                top: 0;
-                left: 224px;
-                bottom: 0;
-                background: #fff;
-                .middle-category {
-                  // display: none;
-                  width: 224px;
-                  a{
-                    padding: 8px 16px;
-                    text-decoration: none;
-                  }
-                }
-              }
-            }
-          }
         }
         .brands {
           position: relative;
@@ -115,32 +77,12 @@ header {
               text-decoration: none;
             }
           }
-          ul {
-            display: none;
-            position: absolute;
-            top: 38px;
-            left: -34px;
-            z-index: 1000;
-            background: #fff;
-            .brand__name {
-              // display: none;
-              width: 224px;
-              h3 {
-                font-weight: 400;
-                font-size: 14px;
-                a {
-                  padding: 0 16px;
-                  line-height: 44px;
-                  text-decoration: none;
-                }
-              }
-            }
-          }
         }
       }
     }
   }
 }
+
 
 .signin-and-signup {
   ul {
