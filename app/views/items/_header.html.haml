@@ -1,8 +1,7 @@
 .default-container
   %header
     .logo-and-search.clearfix
-      .logo-and-search__logo.left-float
-        = image_tag '//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1324730246'
+      = image_tag("logo.svg", class: "logo-and-search__logo left-float")
       .search
         %form.logo-and-search__search.right-float
           %input{value:"", placeholder:"キーワードから探す" }
@@ -12,14 +11,18 @@
         %ul
           %li.categories
             %h2
-              %a{href: ""} カテゴリー
+              = link_to "" do
+                カテゴリー
           %li.brands
             %h2
-              %a{href: ""} ブランド
+              = link_to "" do
+                ブランド
       .signin-and-signup.right-float
         %ul.account
           %li.signin-btn
-            %a.signin-btn__text{href: ""}ログイン
+            =link_to "", class: "signin-btn__text" do
+              ログイン
           %li.signup-btn
-            %a.signup-btn__text{href: ""}新規会員登録
+            =link_to "", class: "signup-btn__text" do
+              新規会員登録
 
