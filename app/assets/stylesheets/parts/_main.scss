@@ -31,15 +31,13 @@
         font-size: 60px;
         font-weight: bold;
         color: #fff;
-        line-height: 1.2;
+        line-height: 1.4;
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
       }
       p {
         font-family: $font-source;
-        margin: 16px 0 0;
         color: #fff;
         font-size: 18px;
-        line-height: 1.77778;
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
       }
       .app-download {
@@ -47,9 +45,13 @@
         line-height: 0;
         &__store {
           display: inline-block;
-          width: 128px;
-          height: 38px;
+          width: 170px;
+          height: 50.36px;
           margin: 0 0 0 8px;
+          cursor: pointer;
+          &:hover {
+                opacity: 0.7;
+          }
         }
       }
     }
@@ -153,8 +155,12 @@
       margin: 0 auto;
       &__store {
         padding: 7px 16px;
-        width: 128px;
-        height: 38px;
+        width: 135px;
+        height: 40px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -219,3 +225,5 @@
     }
   }
 }
+
+
