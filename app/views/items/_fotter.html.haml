@@ -1,0 +1,93 @@
+.fotter
+  %nav
+    %ul
+      %li.fotter-cell.about-mercari
+        %h2.fotter__header
+          メルカリについて
+        %ul
+          %li
+            = link_to "" do
+              プライバシーポリシー
+          %li
+            = link_to "" do
+              利用規約
+          %li
+            = link_to "" do
+              会社概要（運営会社）
+          %li
+            = link_to "" do
+              特定商取引に関する表記
+          %li
+            = link_to "" do
+              法令遵守と犯罪防止のために
+          %li
+            = link_to "" do
+              採用情報
+          %li
+            = link_to "" do
+              メルカリアッテ
+
+      %li.fotter-cell.look-at-mercari
+        %h2.fotter__header
+          メルカリを見る
+        %ul
+          %li
+            = link_to "" do
+              カテゴリー一覧
+          %li
+            = link_to "" do
+              ブランド一覧
+          %li
+            = link_to "" do
+              出品地域一覧
+          %li
+            = link_to "" do
+              公式Twitter
+          %li
+            = link_to "" do
+              公式Facebook
+
+      %li.fotter-cell.help-and-guid
+        %h2.fotter__header
+          ヘルプ＆ガイド
+        %ul
+          %li
+            = link_to "" do
+              メルカリロゴ利用ガイドライン
+          %li
+            = link_to "" do
+              お知らせ
+          %li
+            = link_to "" do
+              らくらくメルカリ便とは
+          %li
+            = link_to "" do
+              大型らくらくメルカリ便とは
+          %li
+            = link_to "" do
+              車体取引ガイド
+          %li
+            = link_to "" do
+              メルカリあんしん・あんぜん宣言！
+      %li.fotter-cell.country
+        %h2.fotter__header
+          国
+        %ul
+          %li
+            .us
+              = link_to "" do
+                =image_tag("fotter/flag_us.png")
+                United States
+          %li
+            .uk
+              = link_to "" do
+                =image_tag("fotter/flag_uk.png")
+                United Kingdom
+          %li
+            .jp
+              = link_to "" do
+                =image_tag("fotter/flag_jp.png")
+                日本
+  = link_to "", class: "fotter__icon" do
+    =image_tag("fotter/logo-white.svg")
+  %p.fotter__copyright © 2017 Mercari
