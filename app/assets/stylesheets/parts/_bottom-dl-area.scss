@@ -1,0 +1,72 @@
+.bottom-dl-area{
+  background-image: url(bottom-dl-area/download_bg_pc.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: $font-source;
+  &__contents {
+    overflow: hidden;
+    position: relative;
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 1.2;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    .left-img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 35px;
+        margin: 10px 0 0;
+      }
+      .app-banner-icon {
+        height: 68px;
+        margin: 20px 0 0;
+        overflow: hidden;
+        &__icons-box {
+          float: left;
+          margin: 0;
+          padding: 0;
+          .mercari-icon {
+            height: 68px;
+            width:  68px;
+          }
+        }
+        .imgs {
+          float: left;
+          margin: 14px 0 0 24px;
+          li {
+            float: left;
+            img {
+              height: 40px;
+              width:  133px;
+              cursor: pointer;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+            .google {
+              margin: 0 0 0 16px;
+            }
+          }
+        }
+      }
+    }
+    .right-img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      img{
+        width: 300px;
+        height: 100%;
+      }
+    }
+  }
+}

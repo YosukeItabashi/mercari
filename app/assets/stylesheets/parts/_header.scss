@@ -7,7 +7,7 @@
 }
 
 header {
-  height: 90px;
+  height: 82px;
   width: 1020px;
   margin: 0 auto;
   padding: 8px 0 0;
@@ -41,18 +41,17 @@ header {
         line-height: 36px;
         cursor: pointer;
         text-align: center;
-        // content: '\e025';
       }
     }
   }
 
   .lists {
     height: 32px;
-    margin: 8px 0 0;
+    margin: 9px 0 0 0;
     &__left {
       ul{
         .categories {
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 400;
           position: relative;
           display: inline-block;
@@ -69,7 +68,7 @@ header {
           display: inline-block;
           padding: 0 0 0 16px;
           h2 {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 400;
             a {
               display: block;
@@ -95,9 +94,9 @@ header {
         background: #ea352d;
         border: 1px solid #ea352d;
         color: #fff;
-        font-size: 14px;
+        font-size: 13px;
         text-decoration: none;
-        padding: 0 16px;
+        padding: 0 18px;
         border-radius: 4px;
         text-align: center;
         line-height: 30px;
@@ -106,7 +105,7 @@ header {
     .signup-btn {
       float: right;
       display: inline-block;
-      margin: 0 0 0 8px;
+      margin: 0 0 0 11px;
       border-radius: 4px;
       .signup-btn__text{
         display: block;

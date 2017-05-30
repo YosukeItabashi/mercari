@@ -1,0 +1,28 @@
+.default-container
+  %header
+    .logo-and-search.clearfix
+      = image_tag("header/logo.svg", class: "logo-and-search__logo left-float")
+      .search
+        %form.logo-and-search__search.right-float
+          %input{value:"", placeholder:"キーワードから探す" }
+          %i.fa.fa-search
+    .lists.clearfix
+      .lists__left.left-float
+        %ul
+          %li.categories
+            %h2
+              = link_to "" do
+                カテゴリー
+          %li.brands
+            %h2
+              = link_to "" do
+                ブランド
+      .signin-and-signup.right-float
+        %ul.account
+          %li.signin-btn
+            = link_to user_session_path, class: "signin-btn__text" do
+              ログイン
+          %li.signup-btn
+            = link_to "", class: "signup-btn__text" do
+              新規会員登録
+

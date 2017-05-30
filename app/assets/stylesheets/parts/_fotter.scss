@@ -1,0 +1,92 @@
+.fotter {
+  padding: 60px 0;
+  background: #212121;
+  text-align: center;
+  color: #fff;
+  font-family: $font-source;
+  nav {
+    width: 1020px;
+    margin: 0 auto;
+    ul {
+      padding: 0 0 30px 0;
+      .fotter-cell {
+        display: inline-block;
+        width: 23%;
+        margin: 0 2% 0 0;
+        vertical-align: top;
+        box-sizing: border-box;
+        .fotter__header {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 0 0 12px 0;
+        }
+        ul {
+          background-repeat: no-repeat;
+          margin: 0;
+          padding: 0;
+          li {
+            margin: 9px 0 0;
+            .us {
+              opacity: 0.2;
+              padding: 5px 0;
+            }
+            .uk {
+              opacity: 0.2;
+              padding: 5px 0;
+            }
+            .jp {
+              padding: 5px 0;
+            }
+            a {
+              font-size: 14px;
+              color: #fff;
+              text-decoration: none;
+              img {
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+      .country {
+        margin: 0;
+      }
+    }
+  }
+
+  &__icon {
+    padding-top: 40px;
+    img {
+      width: 124px;
+      height: 33px;
+    }
+  }
+  &__copyright {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
+
+.exhibit {
+  a{
+    width: 160px;
+    height: 160px;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    font-size: 22px;
+    border-radius: 50%;
+    background: #ea352d;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    .text{
+      margin: 32px 0 0;
+      padding: 0;
+    }
+    i{
+      margin: 8px 0 0;
+      font-size: 54px;
+    }
+  }
+}
