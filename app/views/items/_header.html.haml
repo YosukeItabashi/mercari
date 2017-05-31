@@ -19,10 +19,14 @@
                 ブランド
       .signin-and-signup.right-float
         %ul.account
-          %li.signin-btn
-            = link_to user_session_path, class: "signin-btn__text" do
-              ログイン
-          %li.signup-btn
-            = link_to "", class: "signup-btn__text" do
-              新規会員登録
+          - if user_signed_in?
+            %li.signin-btn
+              = link_to "", class: "signin-btn__text" do
+                マイページ
+          - else
+            %li.signin-btn
+              = link_to "ログイン", user_session_path, class: "signin-btn__text"
+            %li.signup-btn
+              = link_to "新規会員登録", user_session_path, class: "signup-btn__text"
+          %end
 
