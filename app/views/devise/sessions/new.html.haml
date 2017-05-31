@@ -23,9 +23,9 @@
       .login-form-for
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .field
-            = f.email_field :email, autofocus: true, placeholder: "メールアドレス"
+            = f.email_field :email, autofocus: true, placeholder: "メールアドレス", class: "sign_in_mail"
           .field
-            = f.password_field :password, autocomplete: "off", placeholder: "パスワード"
+            = f.password_field :password, autocomplete: "off", placeholder: "パスワード", class: "sign_in_pass"
           .no-robot
             .no-robot__left
               .no-robot__left__checkbox
