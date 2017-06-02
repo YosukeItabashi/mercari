@@ -1,7 +1,8 @@
 .default-container
   %header
     .logo-and-search.clearfix
-      = image_tag("header/logo.svg", class: "logo-and-search__logo left-float")
+      =link_to root_path do
+        = image_tag("header/logo.svg", class: "logo-and-search__logo left-float")
       .search
         %form.logo-and-search__search.right-float
           %input{value:"", placeholder:"キーワードから探す" }
@@ -21,8 +22,7 @@
         %ul.account
           - if user_signed_in?
             %li.signin-btn
-              = link_to "", class: "signin-btn__text" do
-                マイページ
+              = link_to "マイページ", "/users/#{current_user.id}", class: "signin-btn__text"
           - else
             %li.signin-btn
               = link_to "ログイン", user_session_path, class: "signin-btn__text"
