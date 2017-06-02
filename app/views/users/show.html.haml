@@ -1,0 +1,19 @@
+.header-wrapper
+= render "items/header"
+
+.banner
+  = image_tag("main/banner.jpg", class: "banner__img")
+
+%h1
+  マイページ
+  %br/
+  = link_to "商品を出品する", new_item_path, method: :get
+  %br/
+  = link_to "ログアウト", destroy_user_session_path, method: :delete
+  %br/
+  = link_to "トップへ戻る", root_path, method: :get
+
+.bottom-dl-area-wrapper
+= render "items/bottom-dl-area"
+.fotter-wrapper
+=render "items/fotter"

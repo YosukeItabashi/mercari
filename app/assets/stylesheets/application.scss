@@ -1,10 +1,19 @@
+// 基本セット
 @import "./reset";
 @import "font-awesome";
 @import "./font-source";
+@import "mixin/clearfix";
+
+// トップページ関連
 @import "parts/header";
 @import "parts/main";
 @import "parts/pickup-contents";
 @import "parts/bottom-dl-area";
 @import "parts/fotter";
+
+// ユーザー管理機能
 @import "login_parts/sign-in";
-@import "item_parts/item-detail"
+
+// 商品出品・購入機能
+@import "item_parts/item-detail";
+@import "item_parts/item-exhibit"
