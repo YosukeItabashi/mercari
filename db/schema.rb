@@ -13,12 +13,19 @@
 ActiveRecord::Schema.define(version: 20170601102235) do
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                      null: false
-    t.text     "image",       limit: 65535, null: false
-    t.text     "description", limit: 65535, null: false
-    t.string   "state",                     null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "name",                        null: false
+    t.string   "image"
+    t.text     "description",   limit: 65535
+    t.string   "category"
+    t.string   "state"
+    t.string   "postage"
+    t.string   "region"
+    t.string   "shipping_date"
+    t.integer  "price"
+    t.integer  "saler_id"
+    t.integer  "buyer_id"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["name"], name: "index_items_on_name", using: :btree
   end
 
