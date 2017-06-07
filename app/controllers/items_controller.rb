@@ -1,10 +1,12 @@
 class ItemsController < ApplicationController
 
   def index
+    @items = Item.all.order("created_at DESC")
   end
 
   def show
-    # 商品詳細を表示
+    @item = Item.find(params[:id])
+    @user = User.find(@item.saler_id)
   end
 
   def new
