@@ -1,9 +1,15 @@
 .header-wrapper
 = render "header"
-.main-wrapper
-= render "main"
+
+.items
 .pickup-contents-wrapper
-= render "pickup-contents"
+.pickup-contents
+  %h2.pickup-contents__title
+    %p アイテム一覧 </br></br>
+  %section.items-contents
+    .items-box-content
+      = render partial: 'items', collection: @items, as: :item
+
 .bottom-dl-area-wrapper
 = render "bottom-dl-area"
 .fotter-wrapper

@@ -5,11 +5,11 @@
 @import "mixin/clearfix";
 
 // トップページ関連
-@import "parts/header";
-@import "parts/main";
-@import "parts/pickup-contents";
-@import "parts/bottom-dl-area";
-@import "parts/fotter";
+@import "main_parts/header";
+@import "main_parts/main";
+@import "main_parts/pickup-contents";
+@import "main_parts/bottom-dl-area";
+@import "main_parts/fotter";
 
 // ユーザー管理機能
 @import "login_parts/sign-in";
