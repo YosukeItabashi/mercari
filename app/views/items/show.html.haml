@@ -8,7 +8,7 @@
     .l-content
       .l-content__container
         %h2.item-detail-name
-          アイテム名
+          = @item.name
         .item-content
           .item-content__main-photo
             = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/photos/m30775787197_1.jpg?1496224865")
@@ -26,7 +26,7 @@
               %th
                 出品者
               %td
-                = link_to "出品者名", ""
+                = link_to "#{@user.nickname}", ""
                 .item-user-rating
                   %i.icon-good
                 .item-user-rating
@@ -37,43 +37,34 @@
               %th
                 カテゴリー
               %td
-                = link_to "レディース", ""
-            %tr
-              %th
-                ブランド
-              %td
-                ノーブランド
+                = link_to "#{@item.category}", ""
             %tr
               %th
                 商品の状態
               %td
-                新品、未使用
-            %tr
-              %th
-                配送の方法
-              %td
-                クイックポスト
+                = @item.state
             %tr
               %th
                 配送元地域
               %td
-                愛知県
+                = @item.region
             %tr
               %th
                 配送の目安
               %td
-                2〜3日で発送
+                = @item.shipping_date
 
       .item-detail-price
         %span.item-detail-price__bold
-          ¥1,060円
+          ¥
+          =@item.price
         %span.item-detail-price__shipping-fee
           送料込み
       .item-buy-btn
         = link_to "購入する", "", class: ""
       .item-description
         %p
-          パステル調のインコ柄のメガネケースです。
+          = simple_format(@item.description)
 
       .item-button-container
         .item-button-left
