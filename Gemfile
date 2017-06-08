@@ -37,6 +37,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml-rails'
 gem 'devise'
 gem "font-awesome-rails"
+gem 'carrierwave'
+gem 'rmagick', require: 'RMagick'
+gem 'fog'
+gem 'dotenv-rails'
+gem 'dropzonejs-rails'
+gem 'seed-fu', '~> 2.3'
 
 group :production do
   gem 'unicorn'
@@ -65,4 +71,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'seed-fu', '~> 2.3'

@@ -15,14 +15,11 @@
             %span.form-require
               必須
             %p
-              最大4枚までアップロードできます
+              画像をアップロードします。
             .sell-dropbox-container
               .sell-upload-items
-              .sell-upload-drop-box
-                %input.sell-upload-drop-file{:multiple => "multiple", :name => "image1", :style => "display: none;", :type => "file"}/
-                %pre.visible-pc
-                  ドラッグアンドドロップ
-                  またはクリックしてファイルをアップロード
+              = f.file_field :image, { class: "sell-upload-drop-box" }
+
           .sell-content
             .form-group-first
               = f.label :name, "商品名", {class: 'form-label'}

@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170601102235) do
+ActiveRecord::Schema.define(version: 20170607131941) do
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                        null: false
-    t.string   "image"
     t.text     "description",   limit: 65535
     t.string   "category"
     t.string   "state"
@@ -26,6 +25,7 @@ ActiveRecord::Schema.define(version: 20170601102235) do
     t.integer  "buyer_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.string   "image"
     t.index ["name"], name: "index_items_on_name", using: :btree
   end
 
