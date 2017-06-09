@@ -11,15 +11,15 @@
           = @item.name
         .item-content
           .item-content__main-photo
-            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/photos/m30775787197_1.jpg?1496224865")
+            = image_tag @item.image
           .item-content__sub-photo
-            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/photos/m30775787197_1.jpg?1496224865")
+            = image_tag @item.image
           .item-content__sub-photo
-            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/photos/m30775787197_1.jpg?1496224865")
+            = image_tag @item.image
           .item-content__sub-photo
-            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/photos/m30775787197_1.jpg?1496224865")
+            = image_tag @item.image
           .item-content__sub-photo
-            = image_tag("https://static-mercari-jp-imgtr2.akamaized.net/photos/m30775787197_1.jpg?1496224865")
+            = image_tag @item.image
         %table.item-detail-table
           %tbody
             %tr
@@ -61,7 +61,8 @@
         %span.item-detail-price__shipping-fee
           送料込み
       .item-buy-btn
-        = link_to "購入する", "", class: ""
+        = form_tag("/items/#{@item.id}/purchase", action: :purchase, method: :post) do
+          %script.payjp-button{"data-key" => PAYJP_PUBLIC_KEY, :src => "https://checkout.pay.jp", :type => "text/javascript"}
       .item-description
         %p
           = simple_format(@item.description)
