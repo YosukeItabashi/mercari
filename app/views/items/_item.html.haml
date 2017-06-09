@@ -1,8 +1,7 @@
-= link_to item_path(item.id) do
+= link_to item_path(item), "data-turbolinks": false do
   .items-box
     .detail-page
       = image_tag item.image, class: "detail-page__img"
-      / = image_tag("pickup-contents/item1.jpg", class: "detail-page__img")
       .detail-page__body
         %h3.item-name
           = item.name
