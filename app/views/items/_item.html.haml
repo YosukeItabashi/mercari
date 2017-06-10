@@ -2,6 +2,10 @@
   .items-box
     .detail-page
       = image_tag item.image, class: "detail-page__img"
+      - if item.sold?
+        .item-sold-out-badge-mini
+          SOLD
+      %end
       .detail-page__body
         %h3.item-name
           = item.name

@@ -1,5 +1,5 @@
 .header-wrapper
-= render "header"
+= render "items/main/header"
 .banner
   = image_tag("main/banner.jpg", class: "banner__img")
 
@@ -12,6 +12,10 @@
         .item-content
           .item-content__main-photo
             = image_tag @item.image
+          - if @item.sold?
+            .item-sold-out-badge
+              SOLD
+          %end
           .item-content__sub-photo
             = image_tag @item.image
           .item-content__sub-photo
@@ -60,9 +64,16 @@
           =@item.price
         %span.item-detail-price__shipping-fee
           送料込み
-      .item-buy-btn
-        = form_tag("/items/#{@item.id}/purchase", action: :purchase, method: :post) do
-          %script.payjp-button{"data-key" => PAYJP_PUBLIC_KEY, :src => "https://checkout.pay.jp", :type => "text/javascript"}
+      - if @item.sold?
+        .item-buy-btn__sold
+          売り切れました
+      - else
+        .item-buy-btn
+          = form_tag("/items/#{@item.id}/purchase", action: :purchase, method: :post) do
+            %script.payjp-button{"data-key" => PAYJP_PUBLIC_KEY, :src => "https://checkout.pay.jp", :type => "text/javascript"}
+
+      %end
+
       .item-description
         %p
           = simple_format(@item.description)
@@ -81,6 +92,6 @@
         = image_tag("items/side_banner.jpg")
 
 .bottom-dl-area-wrapper
-= render "bottom-dl-area"
+= render "items/main/bottom-dl-area"
 .fotter-wrapper
-=render "fotter"
+= render "items/main/fotter"
