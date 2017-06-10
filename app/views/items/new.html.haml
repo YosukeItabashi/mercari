@@ -17,8 +17,10 @@
             %p
               画像をアップロードします。
             .sell-dropbox-container
-              .sell-upload-items
-              = f.file_field :image, { class: "sell-upload-drop-box" }
+              %label.image-uploader
+                = f.file_field :image
+                .sell-upload-drop-box
+                  %pre 画像をアップロード
 
           .sell-content
             .form-group-first
