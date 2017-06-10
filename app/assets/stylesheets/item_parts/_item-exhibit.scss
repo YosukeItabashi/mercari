@@ -1,5 +1,3 @@
-
-
 .sell-container {
   background: rgb(245, 245, 245);
   width: 700px;
@@ -201,5 +199,11 @@
     width: 45%;
     margin: 24px auto 0;
     text-decoration: none;
+  }
+}
+
+.image-uploader {
+  input {
+  display: none;
   }
 }

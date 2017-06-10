@@ -1,19 +1,25 @@
 .header-wrapper
-= render "items/header"
+= render "items/main/header"
 
 .banner
   = image_tag("main/banner.jpg", class: "banner__img")
-
-%h1
-  マイページ
-  %br/
-  = link_to "商品を出品する", new_item_path, method: :get
-  %br/
-  = link_to "ログアウト", destroy_user_session_path, method: :delete
-  %br/
-  = link_to "トップへ戻る", root_path, method: :get
+.mypage
+  .mypage__nav-container
+    .mypage-nav-list
+      %nav.mypage-nav
+        %ul
+          %li
+            = link_to "マイページ",  "/users/#{current_user.id}", method: :get
+          %li
+            = link_to "商品を出品する", new_item_path, method: :get
+          %li
+            = link_to "商品を購入する", items_path, method: :get
+          %li
+            = link_to "ログアウト", destroy_user_session_path, method: :delete
+          %li
+            = link_to "トップへ戻る", root_path, method: :get
 
 .bottom-dl-area-wrapper
-= render "items/bottom-dl-area"
+= render "items/main/bottom-dl-area"
 .fotter-wrapper
-= render "items/fotter"
+= render "items/main/fotter"
