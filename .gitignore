@@ -20,5 +20,4 @@
 /.env
 public/uploads/item/image
 public/uploads/tmp
-README.md
 config/initializers/setting.rb
