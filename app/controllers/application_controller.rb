@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate_user!, only: [:new, :purchase]
+  before_action :authenticate_user!, only: [:new, :show, :purchase]
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def configure_permitted_parameters

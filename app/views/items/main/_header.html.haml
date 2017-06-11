@@ -6,7 +6,8 @@
       .search
         %form.logo-and-search__search.right-float
           %input{value:"", placeholder:"キーワードから探す" }
-          %i.fa.fa-search
+          = link_to items_path do
+            %i.fa.fa-search
     .lists.clearfix
       .lists__left.left-float
         %ul
