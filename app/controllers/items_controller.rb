@@ -33,6 +33,7 @@ class ItemsController < ApplicationController
     )
     @item.buyer_id = current_user.id
     @item.save
+    flash.now[:alert] = "クレジットカードによる商品の購入が完了しました。"
   end
 
   private
