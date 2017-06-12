@@ -9,6 +9,11 @@
       .l-content__container
         %h2.item-detail-name
           = @item.name
+        - if current_user.id == @item.saler_id
+          .edit-and-destroy
+            = link_to '編集', edit_item_path, method: :get
+            = link_to '削除', item_path, method: :delete, data: {confirm: "本当に削除しますか？"}
+        %end
         .item-content
           .item-content__main-photo
             = image_tag @item.image

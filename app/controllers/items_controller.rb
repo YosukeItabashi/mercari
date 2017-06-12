@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :purchase]
+  before_action :set_item, only: [:show, :purchase, :edit, :destroy, :update]
 
   def index
     @items = Item.all.order("created_at DESC")
@@ -33,7 +33,19 @@ class ItemsController < ApplicationController
     )
     @item.buyer_id = current_user.id
     @item.save
-    flash.now[:alert] = "クレジットカードによる商品の購入が完了しました。"
+  end
+
+  def destroy
+    @item.destroy if @item.saler_id == current_user.id
+  end
+
+  def edit
+  end
+
+  def update
+    if @item.saler_id == current_user.id
+      @item.update(name: item_params[:name], image: item_params[:image], description: item_params[:description], category: item_params[:category], state: item_params[:state], postage: item_params[:postage], region: item_params[:region], shipping_date: item_params[:shipping_date], price: item_params[:price], saler_id: current_user.id)
+    end
   end
 
   private

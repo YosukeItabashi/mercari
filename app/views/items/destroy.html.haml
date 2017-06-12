@@ -1,0 +1,29 @@
+.single-container
+  .single-header
+    %h1
+    =link_to root_path do
+      = image_tag("header/logo.svg")
+  .single-main
+    .purchase-box
+      %p
+        商品の削除が完了しました。
+      .link_to_mypage
+        = link_to "マイページへ", "/users/#{current_user.id}", class: "purchase-mypage-link"
+
+.fotter-gray
+  .fotter-gray__box
+    %nav
+      %ul
+        %li
+          = link_to "" do
+            プライバシーポリシー
+        %li
+          = link_to "" do
+            利用規約
+        %li
+          = link_to "" do
+            特定商取引に関する表記
+
+    = link_to "", class: "fotter-logo" do
+      =image_tag("fotter/logo-gray.svg")
+    %p.fotter__copyright © 2017 Mercari
