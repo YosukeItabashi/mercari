@@ -21,3 +21,4 @@
 public/uploads/item/image
 public/uploads/tmp
 config/initializers/setting.rb
+config/secrets.yml
