@@ -38,7 +38,7 @@ gem 'haml-rails'
 gem 'devise'
 gem "font-awesome-rails"
 gem 'carrierwave'
-gem 'rmagick', require: 'RMagick'
+# gem 'rmagick', require: 'RMagick'
 gem 'fog'
 gem 'dotenv-rails'
 gem 'mini_magick'
