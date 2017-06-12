@@ -75,7 +75,7 @@
       - else
         .item-buy-btn
           = form_tag("/items/#{@item.id}/purchase", action: :purchase, method: :post) do
-            %script.payjp-button{"data-key" => PAYJP_PUBLIC_KEY, :src => "https://checkout.pay.jp", :type => "text/javascript"}
+            %script.payjp-button{"data-key" => Rails.application.secrets.payjp_secret_key, :src => "https://checkout.pay.jp", :type => "text/javascript"}
 
       %end
 
