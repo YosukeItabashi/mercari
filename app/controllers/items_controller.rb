@@ -19,13 +19,13 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to "/items", notice: "商品を投稿しました"
     else
-      flash.now[:alert] = @item.errors.full_messages
+      flash.now[:alert] = "必須項目が入力されているかもう一度確認してください。"
       render 'new'
     end
   end
 
   def purchase
-    Payjp.api_key = PAYJP_SECRET_KEY
+    Payjp.api_key = Rails.application.secrets.payjp_secret_key
     Payjp::Charge.create(
       :amount => @item.price,
       :card => params['payjp-token'],

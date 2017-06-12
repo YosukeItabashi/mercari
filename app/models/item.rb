@@ -4,6 +4,7 @@ class Item < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  validates :image, presence: true
   validates :name, presence: true
   validates :description, presence: true
   validates :category, presence: true
@@ -16,4 +17,5 @@ class Item < ApplicationRecord
   def sold?
     buyer.present?
   end
+
 end
