@@ -41,7 +41,6 @@ gem 'carrierwave'
 # gem 'rmagick', require: 'RMagick'
 gem 'fog'
 gem 'dotenv-rails'
-gem 'mini_magick'
 gem 'seed-fu', '~> 2.3'
 gem 'payjp'
 
