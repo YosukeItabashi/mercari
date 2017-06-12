@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to "/items", notice: "商品を投稿しました"
     else
-      flash.now[:alert] = "必須項目を入力してください。"
+      flash.now[:alert] = @item.errors.full_messages
       render 'new'
     end
   end
