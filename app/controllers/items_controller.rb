@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :purchase, :edit, :destroy, :update]
 
   def index
-    @items = Item.where(release: "publick").order("created_at DESC")
+    @items = Item.where(release: "全体公開").order("created_at DESC")
   end
 
   def show
