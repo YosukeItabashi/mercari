@@ -81,6 +81,17 @@
 
           .sell-content
             %H3.sell-sub-head
+              公開範囲
+            .sell-form-box
+              .form-group-first
+                = f.label :release, "商品の公開範囲について", {class: 'form-label'}
+                %span.form-require
+                  必須
+                .select-wrap
+                  = f.select :release, [["全体公開", "全体公開"], ["限定公開", "限定公開"]], {}, { class: "select-default" }
+
+          .sell-content
+            %H3.sell-sub-head
               販売価格(300〜9,999,999)
             .sell-form-box
               %ul.l-left
