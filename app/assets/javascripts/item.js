@@ -9,3 +9,8 @@ $(function() {
     $(".profits").children('.l-right').text("￥" + profits);
   });
 });
+
+// URLコピー機能
+$(document).ready(function() {
+  var clip = new ZeroClipboard($("#d_clip_button"))
+});
