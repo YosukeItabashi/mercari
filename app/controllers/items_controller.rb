@@ -48,6 +48,14 @@ class ItemsController < ApplicationController
     end
   end
 
+  def saled
+    @items = Item.where(saler_id: current_user.id).order("created_at DESC")
+  end
+
+  def bought
+    @items = Item.where(buyer_id: current_user.id).order("created_at DESC")
+  end
+
   private
   def item_params
     params.require(:item).permit(:name, :image, :description, :category, :state, :postage, :region, :shipping_date, :price, :release)

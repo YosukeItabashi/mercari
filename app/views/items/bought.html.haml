@@ -1,0 +1,16 @@
+.header-wrapper
+= render "items/main/header"
+
+.items
+.pickup-contents-wrapper
+.pickup-contents
+  %h2.pickup-contents__title
+    %p 購入した商品一覧 </br></br>
+  %section.items-contents
+    .items-box-content
+      = render partial: 'item', collection: @items, as: :item
+
+.bottom-dl-area-wrapper
+= render "items/main/bottom-dl-area"
+.fotter-wrapper
+= render "items/main/fotter"

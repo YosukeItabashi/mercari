@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :items do
     collection do
       post ':id/purchase' => 'items#purchase'
+      get 'saled' => 'items#saled'
+      get 'bought' => 'items#bought'
     end
   end
 end

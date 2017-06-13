@@ -15,6 +15,10 @@
           %li
             = link_to "商品を購入する", items_path, method: :get
           %li
+            = link_to "出品した商品", saled_items_path, method: :get
+          %li
+            = link_to "購入した商品", bought_items_path, method: :get
+          %li
             = link_to "ログアウト", destroy_user_session_path, method: :delete
           %li
             = link_to "トップへ戻る", root_path, method: :get
