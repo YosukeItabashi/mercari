@@ -19,6 +19,7 @@
             .sell-dropbox-container
               %label.image-uploader
                 = f.file_field :image
+                = f.hidden_field :image_cache
                 .sell-upload-drop-box
                   %pre 画像をアップロード
 

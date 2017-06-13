@@ -49,21 +49,19 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @item.image.cache! if @item.image.present?
   end
 
   def update
-    # image_url = Item.friendly.find(params[:id]).image.url
-    # params.require(:item)["image"] = image_url
-
     if @item.saler_id == current_user.id
-      @item.update(name: item_params[:name], image: item_params[:image], description: item_params[:description], category: item_params[:category], state: item_params[:state], postage: item_params[:postage], region: item_params[:region], shipping_date: item_params[:shipping_date], price: item_params[:price], release: item_params[:release], saler_id: current_user.id)
+      @item.update(name: item_params[:name], image: item_params[:image], description: item_params[:description], category: item_params[:category], state: item_params[:state], postage: item_params[:postage], region: item_params[:region], shipping_date: item_params[:shipping_date], price: item_params[:price], release: item_params[:release],image_cache: item_params[:image_cache], saler_id: current_user.id)
     end
   end
 
 
   private
   def item_params
-    params.require(:item).permit(:name, :image, :description, :category, :state, :postage, :region, :shipping_date, :price, :release)
+    params.require(:item).permit(:name, :image, :description, :category, :state, :postage, :region, :shipping_date, :price, :release, :image_cache)
   end
 
   def set_item

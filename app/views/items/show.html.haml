@@ -12,7 +12,7 @@
         - if current_user.id == @item.saler_id
           .saler-box
             .edit-and-destroy
-              = link_to '編集', edit_item_path, method: :get
+              = link_to '編集', edit_item_path(@item), method: :get
               = link_to '削除', item_path, method: :delete, data: {confirm: "本当に削除しますか？"}
             .url-copy
               %h1 この商品のURL:
