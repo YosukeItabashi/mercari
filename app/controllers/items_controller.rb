@@ -42,6 +42,9 @@ class ItemsController < ApplicationController
     )
     @item.buyer_id = current_user.id
     @item.save
+    saler = User.find(@item.saler_id)
+    saler.wallet += @item.price * 0.9
+    saler.save
   end
 
   def destroy
