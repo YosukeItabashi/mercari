@@ -9,8 +9,6 @@
       %nav.mypage-nav
         %ul
           %li
-            = link_to "マイページ",  "/users/#{current_user.id}", method: :get
-          %li
             = link_to "商品を出品する", new_item_path, method: :get
           %li
             = link_to "商品を購入する", items_path, method: :get
