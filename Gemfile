@@ -44,6 +44,7 @@ gem 'dotenv-rails'
 gem 'mini_magick'
 gem 'seed-fu', '~> 2.3'
 gem 'payjp'
+gem 'friendly_id'
 
 group :production do
   gem 'unicorn'
