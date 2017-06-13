@@ -9,6 +9,11 @@
       %nav.mypage-nav
         %ul
           %li
+            %h1 あなたの売上金:
+            %p
+              ¥
+              = current_user.wallet.to_s(:delimited)
+          %li
             = link_to "商品を出品する", new_item_path, method: :get
           %li
             = link_to "商品を購入する", items_path, method: :get
