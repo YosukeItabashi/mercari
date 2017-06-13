@@ -9,11 +9,18 @@
       %nav.mypage-nav
         %ul
           %li
-            = link_to "マイページ",  "/users/#{current_user.id}", method: :get
+            %h1 あなたの売上金:
+            %p
+              ¥
+              = current_user.wallet.to_s(:delimited)
           %li
             = link_to "商品を出品する", new_item_path, method: :get
           %li
             = link_to "商品を購入する", items_path, method: :get
+          %li
+            = link_to "出品した商品", saled_items_path, method: :get
+          %li
+            = link_to "購入した商品", bought_items_path, method: :get
           %li
             = link_to "ログアウト", destroy_user_session_path, method: :delete
           %li
