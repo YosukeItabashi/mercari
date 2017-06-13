@@ -14,6 +14,12 @@ class Item < ApplicationRecord
   validates :shipping_date, presence: true
   validates :price, presence: true
 
+  include FriendlyId
+  friendly_id :random
+  before_create do
+    self.random = SecureRandom.hex(10)
+  end
+
   def sold?
     buyer.present?
   end
