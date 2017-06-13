@@ -1,9 +1,18 @@
 class ItemsController < ApplicationController
 
   before_action :set_item, only: [:show, :purchase, :edit, :destroy, :update]
+  before_action :set_all_items, only: [:index, :saled, :bought]
 
   def index
-    @items = Item.where(release: "全体公開").order("created_at DESC")
+    @items = @items.where(release: "全体公開")
+  end
+
+  def saled
+    @items = @items.where(saler_id: current_user.id)
+  end
+
+  def bought
+    @items = @items.where(buyer_id: current_user.id)
   end
 
   def show
@@ -43,18 +52,14 @@ class ItemsController < ApplicationController
   end
 
   def update
+    # image_url = Item.friendly.find(params[:id]).image.url
+    # params.require(:item)["image"] = image_url
+
     if @item.saler_id == current_user.id
-      @item.update(name: item_params[:name], image: item_params[:image], description: item_params[:description], category: item_params[:category], state: item_params[:state], postage: item_params[:postage], region: item_params[:region], shipping_date: item_params[:shipping_date], price: item_params[:price], saler_id: current_user.id)
+      @item.update(name: item_params[:name], image: item_params[:image], description: item_params[:description], category: item_params[:category], state: item_params[:state], postage: item_params[:postage], region: item_params[:region], shipping_date: item_params[:shipping_date], price: item_params[:price], release: item_params[:release], saler_id: current_user.id)
     end
   end
 
-  def saled
-    @items = Item.where(saler_id: current_user.id).order("created_at DESC")
-  end
-
-  def bought
-    @items = Item.where(buyer_id: current_user.id).order("created_at DESC")
-  end
 
   private
   def item_params
@@ -63,6 +68,10 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.friendly.find(params[:id])
+  end
+
+  def set_all_items
+    @items = Item.all.order("created_at DESC")
   end
 
 end
