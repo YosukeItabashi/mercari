@@ -79,7 +79,7 @@
       .item-detail-price
         %span.item-detail-price__bold
           ¥
-          =@item.price
+          =@item.price.to_s(:delimited)
         %span.item-detail-price__shipping-fee
           送料込み
       - if @item.sold?
