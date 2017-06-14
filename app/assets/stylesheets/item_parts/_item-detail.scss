@@ -186,6 +186,7 @@
   width: 314px;
   font-size: 14px;
   margin: 10px 0px 10px 0;
+  @include clearfix;
   i {
     vertical-align: middle;
   }
