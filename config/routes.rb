@@ -8,5 +8,6 @@ Rails.application.routes.draw do
       get 'saled' => 'items#saled'
       get 'bought' => 'items#bought'
     end
+    resources :comments, only: [:create]
   end
 end
