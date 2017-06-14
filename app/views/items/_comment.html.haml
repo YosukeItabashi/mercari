@@ -5,4 +5,4 @@
     .user-name
       = comment.user.nickname
   .user-comment
-    = comment.text
+    = simple_format(comment.text)
