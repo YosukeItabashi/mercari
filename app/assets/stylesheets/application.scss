@@ -22,6 +22,9 @@
 @import "item_parts/item-exhibit";
 @import "item_parts/item-purchase";
 
+// 各商品へのコメント機能
+@import "comment_parts/create.scss";
+
 // フラッシュメッセージ
 @import "flash/flash";
 
