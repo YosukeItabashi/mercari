@@ -83,13 +83,15 @@
         %span.item-detail-price__shipping-fee
           送料込み
       - if @item.sold?
-        .item-buy-btn__sold
+        .item-buy-btn__gray
           売り切れました
-      - else
+      - elsif current_user == @item.saler
+        .item-buy-btn__gray
+          あなたが出品した商品です。
+      -else
         .item-buy-btn
           = form_tag("/items/#{@item.id}/purchase", action: :purchase, method: :post) do
             %script.payjp-button{"data-key" => Rails.application.secrets.payjp_secret_key, :src => "https://checkout.pay.jp", :type => "text/javascript"}
-
       %end
 
       .item-description
