@@ -47,6 +47,7 @@ gem 'payjp'
 gem 'friendly_id'
 gem 'zeroclipboard-rails'
 
+
 group :production do
   gem 'unicorn'
 end
@@ -59,6 +60,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rails-erd'
 end
 
 group :development do
